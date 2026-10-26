@@ -1,0 +1,634 @@
+
+
+   
+#paragraph {
+    font-size:96px;
+   }
+#title {
+  color: #1F5FD6;
+}
+
+
+
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+p  {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.hero {
+  background-color: #FFD45C;
+  background-image: url("https://www.techhub.in.th/wp-content/uploads/2021/05/118283916_b19c5a1f-162b-410b-8169-f58f0d153752.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.banner {
+  background: linear-gradient(
+    90deg, #0D1C42, #22396F ,#FCF1D0);
+}
+
+.slideshow-container {
+    width: 350px;  /* 📌 ปรับขนาดความกว้างให้เล็กลง เช่น จาก 600px เหลือ 350px */
+    height: 200px; /* 📌 ปรับขนาดความสูงให้ลดลงตามสัดส่วน */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ควบคุมรูปภาพข้างในให้พอดีกับกล่อง */
+.mySlides {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* จัดภาพให้เต็มกล่องโดยไม่เสียสัดส่วน */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.mySlides.active {
+    opacity: 1;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+    week3
+   
+:root {
+  --paper: #D9CBB0;   /* สีกระดาษคราฟต์ พื้นหลังหลัก */
+  --card: #EFE6D4;    /* สีการ์ด */
+  --ink: #1D1B18;     /* สีตัวอักษร */
+  --muted: #5C5346;   /* สีตัวอักษรรอง */
+  --red: #C8321F;     /* สีเน้น: หัวไม้ขีด */
+
+  --font-display: 'Big Shoulders Display', Impact, sans-serif;
+  --font-body: 'Anuphan', Tahoma, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* แก้ไขจากเครื่องหมายลบ เป็นดอกจัน เพื่อกำหนดค่าให้ทุก element */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+/* ป้ายตัวเล็กเหนือหัวข้อ */
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.intro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8vw, 150px); 
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  overflow-wrap: anywhere;
+}
+
+
+
+.lead {
+  max-width: 60ch;
+  margin: 0;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.filters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters a {
+  display: block;
+  padding: 6px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.filters a.active {
+  background: var(--ink);
+  color: var(--card);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+/* มือถือ: 1 คอลัมน์ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  margin: 0;
+  padding: 12px;
+  background: var(--card);
+  border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.card figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding: 12px 4px 4px;
+}
+
+.no {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--red);
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+
+
+.mainlogo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.featured {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.featured img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.featured-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: var(--ink);
+  color: var(--card);
+  border-radius: 6px;
+}
+
+.featured-text h2 {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.featured-text p {
+  margin: 0;
+}
+
+.meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.meta li {
+  padding-top: 8px;
+  border-top: 1px solid rgba(239, 230, 212, 0.35);
+}
+
+.meta b {
+  display: block;
+  font-weight: 400;
+  color: #E2A090;
+}
+
+.site-footer {
+  padding: 24px 20px;
+  background: var(--ink);
+  color: var(--card);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.striker {
+  height: 14px;
+  background: repeating-linear-gradient(45deg, #5A3B22 0 6px, #2E1E12 6px 12px);
+}
+
+/* แสดงตัวบอกขนาดหน้าจอมือถือ */
+.slideshow-container {
+  width: 100vw;         
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;   
+  margin-right: -50vw;
+  height: 450px;       
+  overflow: hidden;
+  margin-top: 90px;    
+}
+
+.slideshow-container img.mySlides {
+  width: 100%;          
+  height: 100%;         
+  object-fit: cover;    
+  display: block;       
+}
+
+/* ==========================================
+   2. เอฟเฟกต์แอนิมอลและตัวบอกสถานะพื้นฐาน
+   ========================================== */
+body::after {
+  content: "MOBILE · ต่ำกว่า 768px";
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 12px;
+  background: var(--red);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* แท็บเล็ต: 768px ขึ้นไป */
+@media (min-width: 768px) {
+  body::after {
+    content: "TABLET · 768px ขึ้นไป";
+  }
+
+  .site-header {
+    flex-direction: row;               /* เมนูมาอยู่แถวเดียวกับโลโก้ */
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+  }
+
+  .intro,
+  .featured,
+  .gallery {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;    /* 2 คอลัมน์ */
+  }
+
+  .featured {
+    grid-template-columns: 1fr 1fr;    /* รูปซ้าย ข้อความขวา */
+  }
+
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 40px;
+  }
+}
+
+/* เดสก์ท็อป: 1024px ขึ้นไป */
+@media (min-width: 1024px) {
+  body::after {
+    content: "DESKTOP · 1024px ขึ้นไป";
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);   /* 3 คอลัมน์ */
+    gap: 28px;
+  }
+
+  .featured {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .featured-text {
+    justify-content: center;
+    padding: 48px;
+  }
+}
+
+.rgp
+{
+  margin-top: 50px;     
+  margin-bottom: 50px
+  
+}
+
+.colle
+{
+  margin-top: 100px;     
+  margin-bottom: 70px
+}
+
+
+
+.grade-container {
+  display: flex;
+  flex-wrap: wrap;       
+  gap: 20px;             
+  justify-content: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.grade-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;   
+  border-radius: 8px;       
+  overflow: hidden;         
+  width: 250px;             
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease;
+}
+
+.grade-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.grade-card img {
+  width: 100%;
+  height: 150px;        
+  object-fit: cover;    
+  display: block;
+}
+
+
+.grade-content {
+  padding: 15px;
+}
+
+.grade-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.grade-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.abcard {
+  display: flex;          
+  align-items: center;    
+  width: 100%;           
+  background: var(--card, #ffffff); 
+  border-radius: 12px;
+  overflow: hidden;       
+  margin-bottom: 30px;    
+}
+
+.abcard-image {
+  flex: 1.2;            
+  max-width: 55%;         
+  height: 500px;          
+}
+
+.abcard-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  display: block;
+}
+
+.abcard-content {
+  flex: 1;                
+  padding: 50px;        
+  display: flex;
+  flex-direction: column;
+  gap: 15px;            
+}
+
+
+.abcard .no {
+  font-family: var(--font-mono, monospace);
+  font-size: 15px;       
+  color: var(--red, #ff4d4d);
+}
+
+.abcard h3 {
+  font-family: var(--font-display, sans-serif);
+  font-size: 38px;      
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  color: #000000;
+}
+
+.abcard p {
+  margin: 0;
+  font-size: 16px;      
+  color: var(--muted, #5a5959);
+  line-height: 1.8;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+  .abcard {
+    flex-direction: column;
+  }
+  .abcard-image {
+    max-width: 100%;
+    width: 100%;
+    height: 320px;      
+  }
+  .abcard-content {
+    padding: 25px;
+  }
+}
+
+
+/* จัดกล่องหลักให้เป็น Relative และเต็มจอ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+/* วิดีโอพื้นหลังเต็มจอ */
+.hero-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* เงาดำไล่ระดับด้านล่าง */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+    z-index: 2;
+}
+
+/* ตำแหน่งข้อความ + รูปภาพ (มุมซ้ายล่าง) */
+.hero-content {
+        position: absolute;
+        bottom: 40px;
+        left: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px; /* เพิ่มห่างระหว่างรูปกับข้อความนิดหน่อย */
+        color: white;
+        max-width: 750px; /* ขยายความกว้างกล่องข้อความให้รองรับตัวหนังสือใหญ่ขึ้น */
+        z-index: 3;
+    }
+
+    /* 📌 ปรับขนาดรูปโปสเตอร์ให้ใหญ่ขึ้น */
+    .hero-poster {
+        width: 120px;   /* จากเดิม 80px */
+        height: 175px;  /* จากเดิม 115px */
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+        border: 1px solid rgba(255,255,255,0.3);
+        transition: opacity 0.5s ease;
+    }
+
+    /* 📌 ปรับขนาดหัวข้อ (h1) ให้ใหญ่ขึ้น */
+    .hero-text h1 {
+        font-size: 42px; /* จากเดิม 28px (ใหญ่และเด่นขึ้นมาก) */
+        font-weight: bold;
+        margin: 0 0 12px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* เพิ่มเงาให้อ่านง่าย */
+        transition: opacity 0.5s ease;
+    }
+
+    /* 📌 ปรับขนาดรายละเอียด (p) ให้ใหญ่ขึ้น */
+    .hero-text p {
+        font-size: 18px; /* จากเดิม 14px */
+        color: #ddd;
+        margin: 0 0 20px 0;
+        line-height: 1.5;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        transition: opacity 0.5s ease;
+    }
+
+    /* 📌 ปรับขนาดปุ่มให้ใหญ่ขึ้นตาม */
+    .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 12px 24px; /* ขยายปุ่มให้ใหญ่ขึ้น */
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 15px; /* จากเดิม 13px */
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+        transition: background 0.3s;
+    }
+    .hero-btn:hover {
+        background: rgba(255, 255, 255, 0.35);
+    }
