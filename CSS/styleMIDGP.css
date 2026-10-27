@@ -520,7 +520,7 @@ body::after {
   line-height: 1.8;
 }
 
-/* Responsive สำหรับมือถือ */
+
 @media (max-width: 768px) {
   .abcard {
     flex-direction: column;
@@ -536,7 +536,7 @@ body::after {
 }
 
 
-/* จัดกล่องหลักให้เป็น Relative และเต็มจอ */
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -546,7 +546,6 @@ body::after {
     font-family: sans-serif;
 }
 
-/* วิดีโอพื้นหลังเต็มจอ */
 .hero-section video {
     position: absolute;
     top: 50%;
@@ -560,7 +559,7 @@ body::after {
     object-fit: cover;
 }
 
-/* เงาดำไล่ระดับด้านล่าง */
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -571,7 +570,7 @@ body::after {
     z-index: 2;
 }
 
-/* ตำแหน่งข้อความ + รูปภาพ (มุมซ้ายล่าง) */
+
 .hero-content {
         position: absolute;
         bottom: 40px;
@@ -579,16 +578,15 @@ body::after {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px; /* เพิ่มห่างระหว่างรูปกับข้อความนิดหน่อย */
+        gap: 20px; 
         color: white;
-        max-width: 750px; /* ขยายความกว้างกล่องข้อความให้รองรับตัวหนังสือใหญ่ขึ้น */
+        max-width: 750px; 
         z-index: 3;
     }
 
-    /* 📌 ปรับขนาดรูปโปสเตอร์ให้ใหญ่ขึ้น */
     .hero-poster {
-        width: 120px;   /* จากเดิม 80px */
-        height: 175px;  /* จากเดิม 115px */
+        width: 120px;   
+        height: 175px;  
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 6px 15px rgba(0,0,0,0.6);
@@ -596,18 +594,18 @@ body::after {
         transition: opacity 0.5s ease;
     }
 
-    /* 📌 ปรับขนาดหัวข้อ (h1) ให้ใหญ่ขึ้น */
+    
     .hero-text h1 {
-        font-size: 42px; /* จากเดิม 28px (ใหญ่และเด่นขึ้นมาก) */
+        font-size: 42px; 
         font-weight: bold;
         margin: 0 0 12px 0;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* เพิ่มเงาให้อ่านง่าย */
         transition: opacity 0.5s ease;
     }
 
-    /* 📌 ปรับขนาดรายละเอียด (p) ให้ใหญ่ขึ้น */
+    
     .hero-text p {
-        font-size: 18px; /* จากเดิม 14px */
+        font-size: 18px; 
         color: #ddd;
         margin: 0 0 20px 0;
         line-height: 1.5;
@@ -615,16 +613,16 @@ body::after {
         transition: opacity 0.5s ease;
     }
 
-    /* 📌 ปรับขนาดปุ่มให้ใหญ่ขึ้นตาม */
+
     .hero-btn {
         display: inline-flex;
         align-items: center;
         background: rgba(255, 255, 255, 0.2);
         color: white;
-        padding: 12px 24px; /* ขยายปุ่มให้ใหญ่ขึ้น */
+        padding: 12px 24px; 
         text-decoration: none;
         border-radius: 6px;
-        font-size: 15px; /* จากเดิม 13px */
+        font-size: 15px; 
         font-weight: bold;
         backdrop-filter: blur(5px);
         transition: background 0.3s;

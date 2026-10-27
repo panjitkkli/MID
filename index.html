@@ -745,7 +745,7 @@
       
 
     <script>
-    // 📌 ข้อมูลสไลด์ทั้งหมด (คุณสามารถเปลี่ยนชื่อรูป หัวข้อ และเนื้อหาตรงนี้ได้เลย)
+   
     const slides = [
         {
             poster: "poster/RG.png",
@@ -754,13 +754,13 @@
            
         },
         {
-            poster: "poster/seedfz.png", // เปลี่ยนชื่อรูปที่ 2 ตามต้องการ
+            poster: "poster/seedfz.png", 
             title: "Mobile Suit Gundam: Seed freedom Zero",
             desc: "Set in C.E. 74, the legendary Strike Freedom Gundam is suddenly stolen by mysterious culprits. Shinn Asuka and his comrades are forced back into battle to track down the stolen machine and prevent a new global crisis.",
             
         },
         {
-            poster: "poster/hathaway_ii_kv.png", // เปลี่ยนชื่อรูปที่ 3 ตามต้องการ
+            poster: "poster/hathaway_ii_kv.png", 
             title: "Mobile Suit Gundam Hathaway",
             desc: "In U.C. 0105, Hathaway Noa continues his underground resistance against the Earth Federation as Mafty. As his rival Kenneth Sleg closes in and his complicated bond with Gigi Andalucia deepens, the stage is set for a massive clash between the Xi Gundam and Federation forces.",
             
@@ -769,13 +769,12 @@
 
     let currentIndex = 0;
 
-    // ฟังก์ชันสั่งเปลี่ยนข้อมูลทุกๆ 20 วินาที
+   
     setInterval(() => {
-        // ขยับไปสไลด์ถัดไป (ถ้าหมดลูปแล้วจะกลับมาเริ่มที่รูปแรกใหม่)
+       
         currentIndex = (currentIndex + 1) % slides.length;
         const currentSlide = slides[currentIndex];
 
-        // สั่งเปลี่ยนค่าใน HTML ตาม ID ที่คุณตั้งไว้
         document.getElementById('slide-poster').src = currentSlide.poster;
         document.getElementById('slide-title').textContent = currentSlide.title;
         document.getElementById('slide-desc').textContent = currentSlide.desc;
