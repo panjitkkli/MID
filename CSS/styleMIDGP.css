@@ -352,7 +352,7 @@ body::after {
   }
 
   .site-header {
-    flex-direction: row;               /* เมนูมาอยู่แถวเดียวกับโลโก้ */
+    flex-direction: row;               
     justify-content: space-between;
     align-items: center;
     padding: 16px 40px;
@@ -366,11 +366,11 @@ body::after {
   }
 
   .grid {
-    grid-template-columns: 1fr 1fr;    /* 2 คอลัมน์ */
+    grid-template-columns: 1fr 1fr;    
   }
 
   .featured {
-    grid-template-columns: 1fr 1fr;    /* รูปซ้าย ข้อความขวา */
+    grid-template-columns: 1fr 1fr;   
   }
 
   .site-footer {
@@ -387,7 +387,7 @@ body::after {
   }
 
   .grid {
-    grid-template-columns: repeat(3, 1fr);   /* 3 คอลัมน์ */
+    grid-template-columns: repeat(3, 1fr);  
     gap: 28px;
   }
 
@@ -599,7 +599,7 @@ body::after {
         font-size: 42px; 
         font-weight: bold;
         margin: 0 0 12px 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* เพิ่มเงาให้อ่านง่าย */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
         transition: opacity 0.5s ease;
     }
 
@@ -630,3 +630,87 @@ body::after {
     .hero-btn:hover {
         background: rgba(255, 255, 255, 0.35);
     }
+
+
+.abgpcard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.abgpcard {
+  display: flex;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.abgpcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+
+.abgpcard-image {
+  width: 100%;
+  height: 380px; 
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.abgpcard-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+}
+
+.abgpcard:hover .abgpcard-image img {
+  transform: scale(1.05); 
+}
+
+.rgxpcard {
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 15px 0; 
+  text-align: left; 
+}
+
+.rgxpcard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.rgxpcard p {
+  font-size: 0.95rem;
+  color: #c9c9ca;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.rgxpcard-btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b8b8b8;
+  text-decoration: none;
+}
+
+.rgxpcard-btn:hover {
+  text-decoration: underline;
+}
+
